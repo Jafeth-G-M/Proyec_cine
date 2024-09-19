@@ -1,48 +1,25 @@
 #include "Movie.h"
 
-Movie::Movie() : nombre(""), año(0), duracion(0), pais(""), resena("") {}
 
-Movie::Movie(std::string nombre, int año, int duracion, std::string pais, std::string resena)
-    : nombre(nombre), año(año), duracion(duracion), pais(pais), resena(resena) {}
+Movie::Movie() : title(""), year(0), duration(0), country(""), review("") {}
+
+
+Movie::Movie(const std::string& title, int year, int duration, const std::string& country, const std::string& review)
+    : title(title), year(year), duration(duration), country(country), review(review) {}
+
 
 Movie::~Movie() {}
 
-std::string Movie::getNombre() const {
-    return nombre;
-}
 
-void Movie::setNombre(const std::string& nombre) {
-    this->nombre = nombre;
-}
+std::string Movie::getTitle() const { return title; }
+int Movie::getYear() const { return year; }
+int Movie::getDuration() const { return duration; }
+std::string Movie::getCountry() const { return country; }
+std::string Movie::getReview() const { return review; }
 
-int Movie::getAño() const {
-    return año;
-}
 
-void Movie::setAño(int año) {
-    this->año = año;
-}
-
-int Movie::getDuracion() const {
-    return duracion;
-}
-
-void Movie::setDuracion(int duracion) {
-    this->duracion = duracion;
-}
-
-std::string Movie::getPais() const {
-    return pais;
-}
-
-void Movie::setPais(const std::string& pais) {
-    this->pais = pais;
-}
-
-std::string Movie::getResena() const {
-    return resena;
-}
-
-void Movie::setResena(const std::string& resena) {
-    this->resena = resena;
-}
+void Movie::setTitle(const std::string& title) { this->title = title; }
+void Movie::setYear(int year) { this->year = year; }
+void Movie::setDuration(int duration) { this->duration = duration; }
+void Movie::setCountry(const std::string& country) { this->country = country; }
+void Movie::setReview(const std::string& review) { this->review = review; }

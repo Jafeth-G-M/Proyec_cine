@@ -1,24 +1,26 @@
-#pragma once
+#ifndef SCHEDULE_H
+#define SCHEDULE_H
 
 #include <string>
 
 class Schedule {
 private:
-    std::string fecha;
-    std::string horaInicio;
-    std::string horaFin;
+    std::string day;
+    std::string startTime;
+    std::string endTime;
 
 public:
     Schedule();
-    Schedule(std::string fecha, std::string horaInicio, std::string horaFin);
+    Schedule(const std::string& day, const std::string& startTime, const std::string& endTime);
     ~Schedule();
 
-    std::string getFecha() const;
-    void setFecha(const std::string& fecha);
+    std::string getDay() const;
+    std::string getStartTime() const;
+    std::string getEndTime() const;
 
-    std::string getHoraInicio() const;
-    void setHoraInicio(const std::string& horaInicio);
-
-    std::string getHoraFin() const;
-    void setHoraFin(const std::string& horaFin);
+    void setDay(const std::string& day);
+    void setStartTime(const std::string& startTime);
+    void setEndTime(const std::string& endTime);
 };
+
+#endif

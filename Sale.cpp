@@ -1,32 +1,19 @@
 #include "Sale.h"
+#include <iostream>
 
-Sale::Sale() : reserve(), cedulaCliente(""), numeroTarjeta("") {}
-
-Sale::Sale(Reserve reserve, std::string cedulaCliente, std::string numeroTarjeta)
-    : reserve(reserve), cedulaCliente(cedulaCliente), numeroTarjeta(numeroTarjeta) {}
-
+Sale::Sale() {}
+Sale::Sale(const Reservation& reservation, const std::string& clientID, const std::string& clientCard)
+    : reservation(reservation), clientID(clientID), clientCard(clientCard) {}
 Sale::~Sale() {}
 
-Reserve Sale::getReserve() const {
-    return reserve;
-}
+Reservation Sale::getReservation() const { return reservation; }
+std::string Sale::getClientID() const { return clientID; }
+std::string Sale::getClientCard() const { return clientCard; }
 
-void Sale::setReserve(const Reserve& reserve) {
-    this->reserve = reserve;
-}
+void Sale::setReservation(const Reservation& reservation) { this->reservation = reservation; }
+void Sale::setClientID(const std::string& clientID) { this->clientID = clientID; }
+void Sale::setClientCard(const std::string& clientCard) { this->clientCard = clientCard; }
 
-std::string Sale::getCedulaCliente() const {
-    return cedulaCliente;
-}
-
-void Sale::setCedulaCliente(const std::string& cedulaCliente) {
-    this->cedulaCliente = cedulaCliente;
-}
-
-std::string Sale::getNumeroTarjeta() const {
-    return numeroTarjeta;
-}
-
-void Sale::setNumeroTarjeta(const std::string& numeroTarjeta) {
-    this->numeroTarjeta = numeroTarjeta;
+void Sale::completeSale() {
+    std::cout << "Venta realizada.\n";
 }

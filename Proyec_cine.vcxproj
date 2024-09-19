@@ -127,17 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Hall.cpp" />
+    <ClCompile Include="Maintenance.cpp" />
+    <ClCompile Include="Room.cpp" />
     <ClCompile Include="Movie.cpp" />
     <ClCompile Include="Proyec_cine.cpp" />
-    <ClCompile Include="Reserve.cpp" />
+    <ClCompile Include="Reservation.cpp" />
     <ClCompile Include="Sale.cpp" />
     <ClCompile Include="Schedule.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Hall.h" />
+    <ClInclude Include="Maintenance.h" />
+    <ClInclude Include="Room.h" />
     <ClInclude Include="Movie.h" />
-    <ClInclude Include="Reserve.h" />
+    <ClInclude Include="Reservation.h" />
     <ClInclude Include="Sale.h" />
     <ClInclude Include="Schedule.h" />
   </ItemGroup>

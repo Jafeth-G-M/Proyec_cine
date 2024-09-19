@@ -1,24 +1,29 @@
-#pragma once
+#ifndef SALE_H
+#define SALE_H
 
-#include "Reserve.h"
+#include "Reservation.h"
+#include <string>
 
 class Sale {
 private:
-    Reserve reserve;
-    std::string cedulaCliente;
-    std::string numeroTarjeta;
+    Reservation reservation;
+    std::string clientID;
+    std::string clientCard;
 
 public:
     Sale();
-    Sale(Reserve reserve, std::string cedulaCliente, std::string numeroTarjeta);
+    Sale(const Reservation& reservation, const std::string& clientID, const std::string& clientCard);
     ~Sale();
 
-    Reserve getReserve() const;
-    void setReserve(const Reserve& reserve);
+    Reservation getReservation() const;
+    std::string getClientID() const;
+    std::string getClientCard() const;
 
-    std::string getCedulaCliente() const;
-    void setCedulaCliente(const std::string& cedulaCliente);
+    void setReservation(const Reservation& reservation);
+    void setClientID(const std::string& clientID);
+    void setClientCard(const std::string& clientCard);
 
-    std::string getNumeroTarjeta() const;
-    void setNumeroTarjeta(const std::string& numeroTarjeta);
+    void completeSale();
 };
+
+#endif

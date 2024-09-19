@@ -1,32 +1,14 @@
 #include "Schedule.h"
 
-Schedule::Schedule() : fecha(""), horaInicio(""), horaFin("") {}
-
-Schedule::Schedule(std::string fecha, std::string horaInicio, std::string horaFin)
-    : fecha(fecha), horaInicio(horaInicio), horaFin(horaFin) {}
-
+Schedule::Schedule() : day(""), startTime(""), endTime("") {}
+Schedule::Schedule(const std::string& day, const std::string& startTime, const std::string& endTime)
+    : day(day), startTime(startTime), endTime(endTime) {}
 Schedule::~Schedule() {}
 
-std::string Schedule::getFecha() const {
-    return fecha;
-}
+std::string Schedule::getDay() const { return day; }
+std::string Schedule::getStartTime() const { return startTime; }
+std::string Schedule::getEndTime() const { return endTime; }
 
-void Schedule::setFecha(const std::string& fecha) {
-    this->fecha = fecha;
-}
-
-std::string Schedule::getHoraInicio() const {
-    return horaInicio;
-}
-
-void Schedule::setHoraInicio(const std::string& horaInicio) {
-    this->horaInicio = horaInicio;
-}
-
-std::string Schedule::getHoraFin() const {
-    return horaFin;
-}
-
-void Schedule::setHoraFin(const std::string& horaFin) {
-    this->horaFin = horaFin;
-}
+void Schedule::setDay(const std::string& day) { this->day = day; }
+void Schedule::setStartTime(const std::string& startTime) { this->startTime = startTime; }
+void Schedule::setEndTime(const std::string& endTime) { this->endTime = endTime; }
